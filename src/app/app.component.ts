@@ -6,10 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  rootName = 'Mhelvin';
-
-  onNameChange(newName) {
-    this.rootName = newName;
+  rootItems = ['Mhelvin', 'Sandy', 'June'];
+  onItemWasAdded(newItem) {
+    this.rootItems.push(newItem);
   }
 }
