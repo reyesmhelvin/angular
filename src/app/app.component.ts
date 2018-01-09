@@ -5,9 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  rootItems = ['Mhelvin', 'Sandy', 'June'];
-  onItemWasAdded(newItem) {
-    this.rootItems.push(newItem);
-  }
-}
+export class AppComponent {}
