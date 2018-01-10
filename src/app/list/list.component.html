@@ -1,17 +1,5 @@
 <ul class="list-group">
-  <li class="list-group-item">
-    <app-item></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item></app-item>
+  <li class="list-group-item" *ngFor="let character of characters">
+    <app-item [character]="character"></app-item>
   </li>
 </ul>
