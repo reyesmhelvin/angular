@@ -1,7 +1,7 @@
 <app-create (addedCharacter)="onCharacterWasAdded($event)"></app-create>
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">All</a></li>
-  <li role="presentation"><a href="#">Light</a></li>
-  <li role="presentation"><a href="#">Dark</a></li>
+  <li role="presentation" (click)="onChoose(0)" style="cursor: pointer;"><a>All</a></li>
+  <li role="presentation" (click)="onChoose(1)" style="cursor: pointer;"><a>Light</a></li>
+  <li role="presentation" (click)="onChoose(2)" style="cursor: pointer;"><a>Dark</a></li>
 </ul>
-<app-list [characters]="characters"></app-list>
+<app-list [characters]="getCharacters()"></app-list>
