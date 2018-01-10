@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabComponent implements OnInit {
   characters = [
-    {name: 'Sandy', side: 2 },
-    {name: 'June', side: 2 },
-    {name: 'Mhelvin', side: 1 }
+    { id: 1, name: 'Sandy', side: 2 },
+    { id: 2, name: 'June', side: 2 },
+    { id: 3, name: 'Mhelvin', side: 1 }
   ];
 
   choosenList = 0;
 
   onCharacterWasAdded(character) {
-    this.characters.push({name: character, side: 0});
+    this.characters.push({id: this.characters.length + 1, name: character, side: 0});
   }
 
   onChoose(side) {
@@ -29,6 +29,10 @@ export class TabComponent implements OnInit {
     return this.characters.filter((character) => {
       return character.side === this.choosenList;
     });
+  }
+
+  setNewSide(event) {
+    console.log(event);
   }
 
   constructor() { }

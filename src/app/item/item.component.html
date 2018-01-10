@@ -1,5 +1,13 @@
 <span>{{character.name}}</span>
 <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-info">Light</button>
-  <button type="button" class="btn btn-danger">Dark</button>
+  <button type="button"
+  class="btn btn-info"
+  *ngIf="choosenList == 2 || choosenList == 0"
+  (click)="onAssign({id: character.id, side: 1})"
+  >Light</button>
+  <button type="button"
+  class="btn btn-danger"
+  *ngIf="choosenList == 1 || choosenList == 0"
+  (click)="onAssign({id: character.id, side: 2})"
+  >Dark</button>
 </div>
