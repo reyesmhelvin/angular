@@ -1,0 +1,12 @@
+div.row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.row div {
+  padding-right: 0px;
+}
+
+.row div:nth-child(2) {
+  padding-left: 0px;
+}
